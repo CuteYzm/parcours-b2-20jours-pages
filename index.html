@@ -1496,7 +1496,7 @@ ${m}`}var E=class extends Error{constructor({message:e,code:t,cause:r,name:s}){v
   byId('account-change').textContent=changing?'取消切换':'切换邀请码';
   byId('account-signout').hidden=!legacyAccount;
   const legacy=byId('account-signin');
-  legacy.hidden=!offline&&(pages||legacyAccount);
+  legacy.hidden=!offline&&(pages||legacyAccount||inviteAccount);
   legacy.href=offline?'https://cuteyzm.github.io/parcours-b2-20jours-pages/':'/signin-with-chatgpt?return_to=/';
   legacy.textContent=offline?'打开在线版':'原有账户入口';
  }
@@ -1546,7 +1546,7 @@ ${m}`}var E=class extends Error{constructor({message:e,code:t,cause:r,name:s}){v
    const response=await fetch(config.url+'/functions/v1/parcours-b2-access?action=login',{method:'POST',headers:{apikey:config.publishableKey,'Content-Type':'application/json'},body:JSON.stringify({code}),credentials:'omit',cache:'no-store',signal:AbortSignal.timeout(20000)});
    const result=await response.json();if(!response.ok)throw {status:response.status,publicMessage:result.error};
    const logged=await client.setSession(result.session);if(logged.error)throw logged.error;
-   chooseInvite();changing=false;byId('account-invite').value='';notice='登录成功，正在同步你的学习进度。';
+   chooseInvite();changing=false;byId('account-invite').value='';notice='登录成功，学习进度会自动同步。';
    await window.ParcoursSync?.flush();
   }catch(error){notice=message(error);}
   finally{busy=false;paint();window.ParcoursSync?.paint();}
