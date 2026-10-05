@@ -1436,6 +1436,9 @@ window.ParcoursRuntime.register('experience',() => {
   form.hidden=true;
   for(const key of ['account-auth-retry','account-email-signout','account-signout','account-sync'])id(key).hidden=true;
   id('account-auth-notice').textContent='邮箱登录与多设备同步正在配置。现在可以直接学习，并在设置中导出进度备份。';
+  id('account-last').textContent='可导出进度备份，在更换浏览器或设备后继续学习。';
+  const footnote=id('account-dialog').querySelector('.account-actions + .account-footnote');
+  if(footnote)footnote.textContent='不同网站的进度分别保存。首次迁移可在原网站导出备份，再在这里导入。';
   const link=id('account-signin');link.hidden=false;link.href='https://parcours-b2-20jours.workspace-149047.chatgpt.site/';link.target='_blank';link.rel='noopener noreferrer';link.textContent='打开原有账户入口';
  }
  window.ParcoursAuth={ready:Promise.resolve(),revision:0,headers:async()=>({}),cachedHeaders:()=>({}),paint};
