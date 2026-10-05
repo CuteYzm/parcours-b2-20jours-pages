@@ -382,7 +382,7 @@ body.booting .liquid-cursor{display:none!important}
 .boot-countdown{position:absolute;left:24px;right:24px;top:29%;transform:translateY(-50%);margin:auto;max-width:880px}
 .boot-countdown h1{width:max-content;font-size:clamp(1.2rem,2.4vw,1.875rem);font-weight:400;line-height:1.55;letter-spacing:.025em;color:#f8f1e7;margin:0 auto 27px;opacity:0;transform-origin:50% 50%;white-space:nowrap}
 .boot-title-line{display:inline-flex;align-items:baseline}
-.encrypted-char{display:inline-block;flex:none;width:var(--char-width,.66em);text-align:center;color:#c3bbae;opacity:.35;transform:translateY(.16em);transition:color 600ms ease,opacity 650ms ease,transform 650ms cubic-bezier(.22,1,.36,1)}
+.encrypted-char{display:inline-block;flex:none;width:var(--char-width,.66em);text-align:center;color:#c3bbae;opacity:.35;transform:translateY(.16em);transition:color 180ms ease,opacity 220ms ease,transform 220ms cubic-bezier(.22,1,.36,1)}
 .encrypted-char.is-revealed{color:inherit;opacity:1;transform:translateY(0)}
 .boot-clock{display:flex;justify-content:center;align-items:baseline;gap:clamp(14px,3.5vw,45px);font-variant-numeric:tabular-nums;white-space:nowrap;opacity:0;transform:translateY(20px)}
 .boot-time-unit{display:flex;align-items:baseline;gap:9px}
@@ -390,11 +390,6 @@ body.booting .liquid-cursor{display:none!important}
 .boot-number{position:relative;display:inline-block;overflow:hidden;font-family:'Times New Roman',serif;font-size:clamp(3rem,6.3vw,5.75rem);font-weight:400;line-height:1.13;min-width:1.03em;text-align:center;letter-spacing:-.02em;color:#fff9ee}
 .ticker-value{display:block}.ticker-old{position:absolute;inset:0;pointer-events:none}
 .boot-date{margin:24px 0 0;font-size:1rem;letter-spacing:.025em;color:#d6cbbb;opacity:0;transform:translateY(12px)}
-.boot-preload{position:absolute;top:calc(50% + 110px);left:50%;width:min(310px,calc(100% - 60px));transform:translateX(-50%)}
-.boot-load-label{display:flex;justify-content:space-between;gap:16px;font-size:.9375rem;color:#dbd0bf;margin-bottom:11px;letter-spacing:.025em}
-.boot-track{height:3px;border-radius:4px;background:#e4d6bb26;overflow:hidden}
-.boot-track>i{display:block;height:100%;background:linear-gradient(90deg,#a5bbc8,#eddbb2);transform-origin:left;transform:scaleX(0);transition:transform 280ms cubic-bezier(.22,1,.36,1)}
-.boot-screen.is-ready .boot-preload{opacity:0;pointer-events:none}
 .boot-choices{position:absolute;top:50%;left:24px;right:24px;max-width:690px;margin:auto;opacity:0;transform:translateY(24px)}
 .boot-choices[hidden]{display:none}
 .boot-choice-heading{font-size:1rem;color:#e2d4c1;font-weight:400;letter-spacing:.09em;margin:0 0 25px}
@@ -413,8 +408,8 @@ body.booting .liquid-cursor{display:none!important}
 .boot-bottom{position:absolute;bottom:24px;left:24px;right:24px;color:#bdaf9c;font-size:.875rem;letter-spacing:.035em;opacity:0;text-wrap:balance}
 .boot-screen.is-leaving{opacity:0;transition:opacity 240ms ease;pointer-events:none}
 @keyframes boot-shimmer{to{transform:rotate(360deg)}}
-@media(max-width:600px){.boot-brand{top:25px;font-size:1.0625rem}.boot-countdown{left:18px;right:18px;top:27%}.boot-countdown h1{font-size:1.125rem;letter-spacing:.025em;margin-bottom:22px}.boot-clock{gap:15px}.boot-time-unit{gap:5px}.boot-time-unit>small{font-size:.9375rem}.boot-number{font-size:clamp(2.45rem,10.2vw,3.5rem)}.boot-date{font-size:.875rem;margin-top:20px}.boot-preload{top:calc(50% + 100px)}.boot-choices{top:46%;left:24px;right:24px}.boot-mode-grid{gap:18px}.boot-choice-heading{margin-bottom:20px;font-size:.9375rem}.shimmer-button{font-size:1.1875rem;min-height:60px;gap:9px;padding:12px}.shimmer-button .icon{width:20px;height:20px}.boot-mode-option>p{font-size:.9375rem;margin-top:13px;line-height:1.7}.boot-mode-option>small{font-size:.875rem}.boot-bottom{bottom:max(20px,env(safe-area-inset-bottom));font-size:.8125rem}}
-@media(max-height:580px){.boot-brand{top:16px}.boot-countdown{top:143px}.boot-countdown h1{margin-bottom:10px}.boot-number{font-size:clamp(2.25rem,10.2vw,2.75rem)}.boot-date{margin-top:10px}.boot-preload{top:calc(50% + 90px)}.boot-choices{top:250px}.boot-bottom{top:500px;bottom:auto;left:18px;right:18px;margin:0;line-height:1.6}}
+@media(max-width:600px){.boot-brand{top:25px;font-size:1.0625rem}.boot-countdown{left:18px;right:18px;top:27%}.boot-countdown h1{font-size:1.125rem;letter-spacing:.025em;margin-bottom:22px}.boot-clock{gap:15px}.boot-time-unit{gap:5px}.boot-time-unit>small{font-size:.9375rem}.boot-number{font-size:clamp(2.45rem,10.2vw,3.5rem)}.boot-date{font-size:.875rem;margin-top:20px}.boot-choices{top:46%;left:24px;right:24px}.boot-mode-grid{gap:18px}.boot-choice-heading{margin-bottom:20px;font-size:.9375rem}.shimmer-button{font-size:1.1875rem;min-height:60px;gap:9px;padding:12px}.shimmer-button .icon{width:20px;height:20px}.boot-mode-option>p{font-size:.9375rem;margin-top:13px;line-height:1.7}.boot-mode-option>small{font-size:.875rem}.boot-bottom{bottom:max(20px,env(safe-area-inset-bottom));font-size:.8125rem}}
+@media(max-height:580px){.boot-brand{top:16px}.boot-countdown{top:143px}.boot-countdown h1{margin-bottom:10px}.boot-number{font-size:clamp(2.25rem,10.2vw,2.75rem)}.boot-date{margin-top:10px}.boot-choices{top:250px}.boot-bottom{top:500px;bottom:auto;left:18px;right:18px;margin:0;line-height:1.6}}
 @media(max-width:380px){.boot-choices{left:18px;right:18px}.boot-mode-grid{gap:14px}.shimmer-button{font-size:1.125rem;letter-spacing:0;gap:6px;padding:12px 10px}.shimmer-button>span{white-space:nowrap}.shimmer-button .icon{width:18px;height:18px}.boot-mode-option>p{font-size:.875rem}.boot-mode-option>small{font-size:.8125rem}}
 @media(prefers-reduced-motion:reduce){.boot-screen *, .boot-screen *::before{animation:none!important;transition:none!important}.boot-screen.is-leaving{transition:none}}
 </style>
@@ -556,7 +551,6 @@ SOFTWARE.
 <span class="boot-time-unit" aria-hidden="true"><span class="boot-number" data-countdown-unit="minutes"><span class="ticker-value">00</span></span><small>分</small></span>
 <span class="boot-time-unit" aria-hidden="true"><span class="boot-number" data-countdown-unit="seconds"><span class="ticker-value">00</span></span><small>秒</small></span>
 </div><p class="boot-date">2026 年 11 月 14 日 · 北京时间 00:00</p></div>
-<div class="boot-preload"><div class="boot-load-label"><span id="boot-stage">正在预加载</span><span id="boot-percent">0%</span></div><div id="boot-progress" class="boot-track" role="progressbar" aria-label="学习界面预加载" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i id="boot-progress-fill"></i></div></div>
 <div id="boot-choices" class="boot-choices" hidden><h2 class="boot-choice-heading">选择你的学习界面</h2><div class="boot-mode-grid">
 <div class="boot-mode-option"><button class="shimmer-button" data-mode-choice="minimal"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6m-6 4h3"/></svg><span>极简模式</span></button><p>牛皮纸与海军蓝<br>静态点阵，轻盈专注</p><small data-mode-note="minimal"></small></div>
 <div class="boot-mode-option"><button class="shimmer-button" data-mode-choice="full"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.4 6.6L21 12l-6.6 2.4L12 21l-2.4-6.6L3 12l6.6-2.4Z"/></svg><span>完全模式</span></button><p>液态玻璃与彩色光流<br>保留完整的交互动效</p><small data-mode-note="full"></small></div>
@@ -1600,11 +1594,11 @@ window.ParcoursRuntime.register('experience',() => {
 (() => {
  'use strict';
  const screen=document.getElementById('boot-screen'),shell=document.querySelector('.shell'),reduce=matchMedia('(prefers-reduced-motion:reduce)');
- const title=document.getElementById('boot-title'),clock=document.getElementById('boot-clock'),date=screen.querySelector('.boot-date'),preload=screen.querySelector('.boot-preload'),bottom=screen.querySelector('.boot-bottom'),progress=document.getElementById('boot-progress'),fill=document.getElementById('boot-progress-fill'),percent=document.getElementById('boot-percent'),stage=document.getElementById('boot-stage'),choices=document.getElementById('boot-choices');
+ const title=document.getElementById('boot-title'),clock=document.getElementById('boot-clock'),date=screen.querySelector('.boot-date'),bottom=screen.querySelector('.boot-bottom'),choices=document.getElementById('boot-choices');
  const phrase='距离 DELF B2 考试还有',charset='ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789#%&?';
  const labels={days:'天',hours:'时',minutes:'分',seconds:'秒'},tickers=[...screen.querySelectorAll('[data-countdown-unit]')];
  let timer=0,encryptFrame=0,silk=null,arrival=null,counting=false,ready=false,visible=true,leaving=false,epoch=0,returnFocus=null,closeTimer=0,clockBase=Date.now(),clockPerf=performance.now();
- const animations=new Set(),introDuration=4000,moveDuration=1600,ease='cubic-bezier(.33,0,.16,1)';
+ const animations=new Set(),introDuration=1000,moveDuration=600,choiceDuration=400,ease='cubic-bezier(.33,0,.16,1)';
  const now=()=>clockBase+performance.now()-clockPerf;
  function phase(name){screen.dataset.phase=name;screen.dataset.phaseAt=String(Math.round(performance.now()));}
  function play(el,frames,options,signal){
@@ -1615,7 +1609,6 @@ window.ParcoursRuntime.register('experience',() => {
   const cancel=()=>animation.cancel();signal.addEventListener('abort',cancel,{once:true});
   return animation.finished.then(()=>{commit();return true;},()=>false).finally(()=>{signal.removeEventListener('abort',cancel);animations.delete(animation);animation.cancel();});
  }
- function setProgress(value,label){progress.setAttribute('aria-valuenow',String(value));fill.style.transform=`scaleX(${value/100})`;percent.textContent=value+'%';stage.textContent=label;}
  async function calibrate(){
   if(!['http:','https:'].includes(location.protocol)||typeof PARCOURS_HOSTING!=='undefined'&&PARCOURS_HOSTING.target==='pages')return;
   const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),1800),sent=performance.now();
@@ -1647,13 +1640,13 @@ window.ParcoursRuntime.register('experience',() => {
   const box=title.getBoundingClientRect(),center=screen.clientHeight/2,scale=Math.min(2.05,(screen.clientWidth-48)/line.getBoundingClientRect().width);
   title.style.transform=`translateY(${center-box.top-box.height/2}px) scale(${scale})`;
   if(reduce.matches){chars.forEach(el=>el.classList.add('is-revealed'));title.style.opacity='1';return Promise.resolve(true);}
-  play(title,[{opacity:0},{opacity:1}],{duration:1000,easing:'cubic-bezier(.22,1,.36,1)'},signal);
+  play(title,[{opacity:0},{opacity:1}],{duration:450,easing:'cubic-bezier(.22,1,.36,1)'},signal);
   const start=performance.now();let last=0;
   return new Promise(resolve=>{
    const cancel=()=>{cancelAnimationFrame(encryptFrame);encryptFrame=0;resolve(false);};signal.addEventListener('abort',cancel,{once:true});
    function tick(time){
-    const elapsed=time-start,count=Math.min(chars.length,Math.max(0,Math.floor((elapsed-450)/185)+1));
-    if(time-last>=75){last=time;chars.forEach((el,i)=>{el.classList.toggle('is-revealed',i<count);el.textContent=i<count?phrase[i]:phrase[i]===' '?' ':charset[Math.floor(Math.random()*charset.length)];});}
+    const elapsed=time-start,count=Math.min(chars.length,Math.max(0,Math.ceil(chars.length*(elapsed-120)/(introDuration-340))));
+    if(time-last>=50){last=time;chars.forEach((el,i)=>{el.classList.toggle('is-revealed',i<count);el.textContent=i<count?phrase[i]:phrase[i]===' '?' ':charset[Math.floor(Math.random()*charset.length)];});}
     if(elapsed>=introDuration){chars.forEach((el,i)=>{el.classList.add('is-revealed');el.textContent=phrase[i];});encryptFrame=0;signal.removeEventListener('abort',cancel);resolve(true);}else encryptFrame=requestAnimationFrame(tick);
    }
    encryptFrame=requestAnimationFrame(tick);
@@ -1666,9 +1659,9 @@ window.ParcoursRuntime.register('experience',() => {
  async function showChoices(signal){
   ready=true;choices.hidden=false;choices.inert=false;recommendations();screen.classList.add('is-ready');screen.setAttribute('aria-busy','false');phase('choices');
   await Promise.all([
-   play(choices,[{opacity:0,transform:'translateY(24px)'},{opacity:1,transform:'translateY(0)'}],{duration:850},signal),
-   ...[...choices.querySelectorAll('.boot-mode-option')].map((el,i)=>play(el,[{opacity:0,transform:'translateY(12px)'},{opacity:1,transform:'translateY(0)'}],{duration:700,delay:80+i*100},signal)),
-   play(bottom,[{opacity:0},{opacity:1}],{duration:650,delay:250},signal)
+   play(choices,[{opacity:0,transform:'translateY(24px)'},{opacity:1,transform:'translateY(0)'}],{duration:choiceDuration},signal),
+   ...[...choices.querySelectorAll('.boot-mode-option')].map((el,i)=>play(el,[{opacity:0,transform:'translateY(12px)'},{opacity:1,transform:'translateY(0)'}],{duration:320,delay:i*40},signal)),
+   play(bottom,[{opacity:0},{opacity:1}],{duration:320,delay:60},signal)
   ]);
   if(!signal.aborted&&visible)phase('ready');
  }
@@ -1688,21 +1681,19 @@ window.ParcoursRuntime.register('experience',() => {
  async function open(initial=false){
   const generation=++epoch;stopArrival();arrival=new AbortController();const signal=arrival.signal,valid=()=>generation===epoch&&!signal.aborted&&visible;
   clearTimeout(closeTimer);leaving=false;visible=true;ready=false;screen.hidden=false;screen.inert=false;screen.classList.remove('is-ready','is-leaving');screen.setAttribute('aria-busy','true');choices.hidden=true;choices.inert=true;phase('loading');
-  [title,clock,date,preload,choices,bottom,...choices.querySelectorAll('.boot-mode-option')].forEach(el=>{el.style.opacity='';el.style.transform='';});clock.setAttribute('aria-hidden','true');date.setAttribute('aria-hidden','true');
+  [title,clock,date,choices,bottom,...choices.querySelectorAll('.boot-mode-option')].forEach(el=>{el.style.opacity='';el.style.transform='';});clock.setAttribute('aria-hidden','true');date.setAttribute('aria-hidden','true');
   returnFocus=initial?null:document.activeElement;shell.inert=true;shell.setAttribute('aria-hidden','true');document.body.classList.add('booting');window.ParcoursRuntime.refresh();
   screen.dataset.examAt='2026-11-14T00:00:00+08:00';screen.dataset.clockSource=screen.dataset.clockSource||'device';
   screen.focus({preventScroll:true});silk=window.ParcoursSilk.start(screen);updateCountdown(true);
-  setProgress(35,'准备学习界面');const calibrated=calibrate();
-  await Promise.race([document.fonts?.ready||Promise.resolve(),new Promise(resolve=>setTimeout(resolve,2200))]);if(!valid())return;
-  phase('decrypting');setProgress(75,'校准考试倒计时');const reveal=decrypt(signal);
-  await calibrated;if(!valid())return;updateCountdown(true);setProgress(92,'正在呈现文字');await reveal;if(!valid())return;
-  setProgress(100,'学习界面就绪');phase('repositioning');counting=true;clock.removeAttribute('aria-hidden');date.removeAttribute('aria-hidden');updateCountdown(true);
+  // Time calibration runs alongside the two-second arrival and never holds up the choices.
+  void calibrate().then(()=>{if(valid())updateCountdown(true);});
+  phase('decrypting');await decrypt(signal);if(!valid())return;
+  phase('repositioning');counting=true;clock.removeAttribute('aria-hidden');date.removeAttribute('aria-hidden');updateCountdown(true);
   // One title travels continuously; the clock enters during its movement, choices follow its settle.
   await Promise.all([
    play(title,[{transform:title.style.transform},{transform:'translateY(0px) scale(1)'}],{duration:moveDuration},signal),
-   play(clock,[{opacity:0,transform:'translateY(20px)'},{opacity:1,transform:'translateY(0)'}],{duration:1150,delay:350},signal),
-   play(date,[{opacity:0,transform:'translateY(12px)'},{opacity:1,transform:'translateY(0)'}],{duration:900,delay:600},signal),
-   play(preload,[{opacity:1},{opacity:0}],{duration:450},signal)
+   play(clock,[{opacity:0,transform:'translateY(20px)'},{opacity:1,transform:'translateY(0)'}],{duration:480,delay:80},signal),
+   play(date,[{opacity:0,transform:'translateY(12px)'},{opacity:1,transform:'translateY(0)'}],{duration:400,delay:160},signal)
   ]);
   if(valid())await showChoices(signal);
  }
